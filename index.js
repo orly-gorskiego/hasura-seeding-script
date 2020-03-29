@@ -1,13 +1,16 @@
-const { getRandomUser } = require('./generators/user');
-const { sendRequest } = require('./api/client');
-const { getUserQuery } = require('./api/queries/user')
+const { generateRandomUser } = require('./generators/user');
+const { createUsers } = require('./api/users/index')
 const dotenv = require('dotenv');
+
 dotenv.config();
 
-const user = getRandomUser()
+const USER_BATCH = 100
 
 const main = async () => {
-  const userRequest = await sendRequest(getUserQuery)
+  const emptyArray = new Array(USER_BATCH).fill(0);
+  const randomUsersArray = emptyArray.map(() => generateRandomUser())
+
+  const result = await createUsers(randomUsersArray)
 }
 
 main()

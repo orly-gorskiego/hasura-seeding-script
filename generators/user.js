@@ -4,7 +4,7 @@ const getRandomGender = () => Math.floor(Math.random() * 2)
 
 const getRandomBirthDate = () => faker.date.between('1980-01-01', '2002-12-31');
 
-const getRandomUser = () => ({
+const generateRandomUser = () => ({
   first_name: faker.name.firstName(),
   last_name: faker.name.lastName(),
   birth_date: getRandomBirthDate(),
@@ -13,4 +13,4 @@ const getRandomUser = () => ({
   description: faker.lorem.sentences(3, 3)
 })
 
-exports.getRandomUser = getRandomUser;
+exports.generateRandomUser = generateRandomUser;
