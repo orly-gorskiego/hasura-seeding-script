@@ -1,0 +1,22 @@
+{
+  "name": "seeding-script",
+  "version": "1.0.0",
+  "description": "Feeds Hasura with randomly generated data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orly-gorskiego/hasura-seeding-script.git"
+  },
+  "keywords": [
+    "hasura"
+  ],
+  "author": "peelar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orly-gorskiego/hasura-seeding-script/issues"
+  },
+  "homepage": "https://github.com/orly-gorskiego/hasura-seeding-script#readme"
+}
