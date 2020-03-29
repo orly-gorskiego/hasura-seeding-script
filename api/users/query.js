@@ -14,7 +14,7 @@ const getUserQuery = `
     }
   `
 
-const createUserMutation = () => `
+const createUserMutation = `
   mutation($data: [users_insert_input!]!) {
     insert_users(objects: $data) {
       returning {

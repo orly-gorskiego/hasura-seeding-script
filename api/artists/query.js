@@ -1,4 +1,4 @@
-const getAllArtists = `
+const getAllArtistsQuery = `
     {
       artists {
         id
@@ -7,7 +7,7 @@ const getAllArtists = `
     }
   `
 
-const createArtistMutation = () => `
+const createArtistMutation = `
   mutation($data: [artists_insert_input!]!) {
     insert_artists(objects: $data) {
       returning {
@@ -18,6 +18,6 @@ const createArtistMutation = () => `
 `
 
 module.exports = {
-  getAllArtists,
+  getAllArtistsQuery,
   createArtistMutation
 }
