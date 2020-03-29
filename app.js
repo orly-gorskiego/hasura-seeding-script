@@ -20,10 +20,10 @@ const main = async () => {
     const randomUsersArray = emptyUserArray.map(() => generateRandomUser())
     const randomArtistsArray = emptyArtistsArray.map(() => generateRandomArtist())
 
-    const users = await createUsers(randomUsersArray)
-    const artists = await createArtists(randomArtistsArray)
-    await createUserSearchStatuses(users)
-    await createUserArtists(users, artists)
+    // const users = await createUsers(randomUsersArray)
+    // const artists = await createArtists(randomArtistsArray)
+    // await createUserSearchStatuses(users)
+    // await createUserArtists(users, artists)
   } catch (error) {
    console.log(error)
   }
