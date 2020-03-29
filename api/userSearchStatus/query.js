@@ -1,6 +1,6 @@
-const createUserSearchStatusMutation = () => `
-  mutation($data: [users_insert_input!]!) {
-    insert_users(objects: $data) {
+const createUserSearchStatusMutation = `
+  mutation($data: [user_search_status_insert_input!]!) {
+    insert_user_search_status(objects: $data) {
       returning {
         id
       }

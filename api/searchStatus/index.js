@@ -7,7 +7,7 @@ const getSearchStatuses = async () => {
   return await sendRequest(query)
 }
 
-const getRandomSearchStatus = ({ search_status }) => search_status[Math.floor(Math.random() * search_status.length)]
+const getRandomSearchStatus = ({ search_status }) => search_status[Math.floor(Math.random() * search_status.length)].id
 
 module.exports = {
   getSearchStatuses,
