@@ -10,6 +10,4 @@ const createUsers = async (data) => {
   return await sendRequest(query, variables)
 }
 
-module.exports = {
-  createUsers,
-}
+module.exports = createUsers

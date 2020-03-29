@@ -21,6 +21,4 @@ const createUserSearchStatuses = async (data) => {
   return await sendRequest(query, variables)
 }
 
-module.exports = {
-  createUserSearchStatuses,
-}
+module.exports = createUserSearchStatuses

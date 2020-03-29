@@ -28,6 +28,4 @@ const createUserArtists = async (usersData, artistsData) => {
   return await sendRequest(query, variables)
 }
 
-module.exports = {
-  createUserArtists,
-}
+module.exports = createUserArtists
