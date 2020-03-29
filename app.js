@@ -3,13 +3,14 @@ const { generateRandomArtist } = require('./generators/artists');
 const { createUsers } = require('./api/users/index')
 const { createArtists } = require('./api/artists/index')
 const { createUserSearchStatuses } = require("./api/userSearchStatus/index")
+const { createUserArtists } = require("./api/userArtists/index")
 
 const dotenv = require('dotenv');
 
 dotenv.config();
 
-const USERS_BATCH = 100
-const ARTISTS_BATCH = 100
+const USERS_BATCH = 500
+const ARTISTS_BATCH = 500
 
 const main = async () => {
   const emptyUserArray = new Array(USERS_BATCH).fill(0);
@@ -19,9 +20,10 @@ const main = async () => {
     const randomUsersArray = emptyUserArray.map(() => generateRandomUser())
     const randomArtistsArray = emptyArtistsArray.map(() => generateRandomArtist())
 
-    // const users = await createUsers(randomUsersArray)
-    // const userSearchStatuses = await createUserSearchStatuses(users)
-    // const artists = await createArtists(randomArtistsArray)
+    const users = await createUsers(randomUsersArray)
+    const artists = await createArtists(randomArtistsArray)
+    await createUserSearchStatuses(users)
+    await createUserArtists(users, artists)
   } catch (error) {
    console.log(error)
   }
